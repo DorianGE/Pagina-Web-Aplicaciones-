@@ -1,14 +1,21 @@
 # Usamos una imagen oficial de PHP con Apache
 FROM php:8.1-apache
 
-# Instalamos las extensiones necesarias para MySQL
+# Instalamos extensiones necesarias para MySQL
 RUN docker-php-ext-install mysqli pdo pdo_mysql
 
-# Habilitamos el módulo rewrite de Apache (útil para URLs amigables)
+# Habilitamos mod_rewrite
 RUN a2enmod rewrite
 
-# Copiamos los archivos de tu proyecto al servidor
+# Copiamos los archivos del proyecto
 COPY . /var/www/html/
 
-# Le decimos a Render que use el puerto 80
+# Damos permisos correctos al servidor web
+RUN chown -R www-data:www-data /var/www/html \
+    && chmod -R 755 /var/www/html
+
+# Establecemos el directorio base
+WORKDIR /var/www/html
+
+# Exponer puerto 80
 EXPOSE 80

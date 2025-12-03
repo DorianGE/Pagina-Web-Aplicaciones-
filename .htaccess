@@ -1,4 +1,4 @@
-Options +FollowSymLinks
+Options -Indexes +FollowSymLinks
 RewriteEngine On
 DirectoryIndex Index.php index.php index.html
 
@@ -9,5 +9,6 @@ DirectoryIndex Index.php index.php index.html
 <IfModule mod_access_compat.c>
     Require all granted
 </IfModule>
+
 
 

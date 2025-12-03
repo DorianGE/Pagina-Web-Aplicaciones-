@@ -1,0 +1,189 @@
+body {
+    background-color: white;
+    font-family: sans-serif; /* O la fuente que uses en el index */
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-top: 20px;
+}
+
+.productos-admin {
+    display: flex;         
+    flex-wrap: wrap;       
+    gap: 20px;            
+    justify-content: center; 
+    padding: 20px;
+}
+
+
+.producto-card {
+    background-color: white;
+    border: 1px solid #ddd;   /* Borde gris suave (antes era rojo) */
+    border-radius: 10px;      
+    padding: 15px;           
+    width: 250px;             /* Ancho aumentado a 250px para igualar el index */
+    text-align: center;      
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Sombra elegante */
+    display: flex;           
+    flex-direction: column;  
+    align-items: center;    
+    justify-content: space-between; /* Para que los botones queden abajo */
+}
+
+/* Imágenes dentro de la tarjeta */
+.producto-card img {
+    width: 100%;              /* Ocupa el ancho disponible de la tarjeta */
+    height: 150px;            /* Altura fija para uniformidad */
+    object-fit: contain;      /* Muestra la imagen entera sin recortarla */
+    margin-bottom: 10px;
+}
+
+.producto-card h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.producto-card p {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #333;
+}
+
+
+.acciones {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.producto-card button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    transition: transform 0.2s;
+}
+
+.producto-card button:hover {
+    transform: scale(1.05); /* Efecto pequeño al pasar el mouse */
+}
+
+.btn-editar { 
+    background-color: #00bcd4; /* Cyan (como tu index) */
+    color: black; 
+}
+
+.btn-eliminar { 
+    background-color: #dc3545; /* Rojo para peligro */
+    color: white; 
+}
+
+/* Botón grande de agregar producto (arriba) */
+.btn-agregar { 
+    display: block;
+    margin: 20px auto; /* Centrado */
+    background-color: #28a745; /* Verde */
+    color: white; 
+    padding: 12px 25px; 
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.form-container {
+    width: 100%;
+    max-width: 450px;        /* Un poco más ancho */
+    margin: 40px auto;
+    padding: 30px;
+    border: 1px solid #ddd;  /* Borde gris para consistencia */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Sombra más fuerte para destacar */
+    background-color: white;
+}
+
+.form-container h2 {
+    margin-bottom: 25px;
+    border-bottom: 2px solid #00bcd4; /* Detalle cyan abajo del título */
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.form-container input[type="text"],
+.form-container input[type="number"],
+.form-container input[type="file"] {
+    width: 100%;
+    padding: 12px;           /* Más espacio para escribir */
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    box-sizing: border-box; /* Asegura que el padding no rompa el ancho */
+}
+
+.form-container button {
+    width: 100%;
+    background-color: #00bcd4; /* Cyan */
+    color: black;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.form-container button:hover {
+    background-color: #00acc1; /* Un cyan un poco más oscuro al pasar mouse */
+}
+
+/* Previsualización de imagen en el formulario */
+.form-container img {
+    display: block;
+    margin: 0 auto 20px auto;
+    max-width: 150px;
+    height: auto;
+    border-radius: 5px;
+    border: 1px solid #eee;
+}
+
+.form-container a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+}
+
+.form-container a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+/* Botón para volver al inicio */
+.btn-volver {
+    display: inline-block;
+    background-color: #6c757d; /* Gris profesional */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.btn-volver:hover {
+    background-color: #5a6268;
+}
+.navegacion-admin {
+    text-align: center; /* Para centrar el botón */
+    width: 100%;
+}

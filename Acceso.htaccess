@@ -1,10 +1,6 @@
 Options +FollowSymLinks
 RewriteEngine On
-DirectoryIndex index.php index.html
-
-<FilesMatch "\.php$">
-    SetHandler application/x-httpd-php
-</FilesMatch>
+DirectoryIndex Index.php index.php index.html
 
 <IfModule mod_access_compat.c>
     Require all granted
